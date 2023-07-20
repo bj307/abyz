@@ -1,0 +1,34 @@
+section {
+  min-height: calc(100vh - 65px);
+  height: auto;
+}
+
+.cardd {
+  max-width: 480px !important;
+  margin: 0 auto;
+  height: auto;
+  padding-top: calc(calc(100vh - 130px) / 4);
+}
+
+p-fieldset {
+  margin-top: 50%;
+}
+
+input,
+.entrar {
+  width: -webkit-fill-available !important;
+}
+
+.input {
+  margin-top: 30px;
+}
+
+.check {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.check label {
+  margin-left: 5px;
+}

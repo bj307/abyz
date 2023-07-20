@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/viva-light/theme.css";
+@import "primeng/resources/themes/soho-light/theme.css";
 @import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+.p-toolbar {
+  background: unset !important;
+  border: unset !important;
+  padding: unset;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  margin: unset !important;
+}

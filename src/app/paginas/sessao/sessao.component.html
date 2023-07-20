@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<section>
+  <div class="cardd">
+    <p-fieldset>
+      <ng-template pTemplate="header">
+        <div class="flex align-items-center text-primary">
+          <span class="pi pi-user mr-2"></span>
+          <span class="font-bold text-lg"> {{titulo}}</span>
+        </div>
+      </ng-template>
+
+      <form [formGroup]="loginForm">
+        <span class="p-float-label input">
+          <input formControlName="email" pInputText id="email" [(ngModel)]="email" />
+          <label htmlFor="username">Email</label>
+        </span>
+
+        <span class="p-float-label input">
+          <input formControlName="senha" type="password" pInputText id="password" [(ngModel)]="password" />
+          <label htmlFor="password">Senha</label>
+        </span>
+
+        <div class="check">
+          <p-checkbox value="lembrarSenha" inputId="ny"></p-checkbox>
+          <label for="ny">Lembrar senha</label>
+        </div>
+
+
+
+        <span class="p-float-label input">
+          <button pButton pRipple label="Entrar" class="p-button-success entrar"></button>
+        </span>
+      </form>
+
+      <p-divider align="center">
+        <span class="p-tag">Ou</span>
+      </p-divider>
+
+      <p-button label="Cadastre-se" styleClass="p-button-danger p-button-text cad"></p-button>
+    </p-fieldset>
+  </div>
+</section>
