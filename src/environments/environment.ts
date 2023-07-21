@@ -1,5 +1,4 @@
 export const environment = {
   mode: 'production',
-  API: '',
-  LOCAL: 'http://localhost:3000/',
+  API: 'https://abyz-api.vercel.app/',
 };

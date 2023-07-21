@@ -9,9 +9,9 @@ import { ILogin } from '../interfaces/ILogin';
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  private LOCAL = environment.LOCAL;
+  private API = environment.API;
 
   public login(usuario: ILogin) {
-    return this.http.post<ILogin>(`${this.LOCAL}usuario/login`, usuario);
+    return this.http.post<ILogin>(`${this.API}usuario/login`, usuario);
   }
 }

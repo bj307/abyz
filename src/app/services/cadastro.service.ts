@@ -9,9 +9,9 @@ import { ICadastro } from '../interfaces/ICadastro';
 export class CadastroService {
   constructor(private http: HttpClient) {}
 
-  private LOCAL = environment.LOCAL;
+  private API = environment.API;
 
   public cadastro(usuario: ICadastro) {
-    return this.http.post<ICadastro>(`${this.LOCAL}usuario/cadastro`, usuario);
+    return this.http.post<ICadastro>(`${this.API}usuario/cadastro`, usuario);
   }
 }

@@ -6,11 +6,11 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class UsuarioService {
-  private LOCAL = environment.LOCAL;
+  private API = environment.API;
 
   constructor(private http: HttpClient) {}
 
   public usuarioPorEmail(email: string) {
-    return this.http.get(`${this.LOCAL}usuario?email=${email}`);
+    return this.http.get(`${this.API}usuario?email=${email}`);
   }
 }
