@@ -1,1 +1,23 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+  <p-messages [(value)]="alerta" [enableService]="false" *ngIf="erro"></p-messages>
+  <span class="p-float-label input">
+    <input formControlName="email" pInputText id="email" [(ngModel)]="email" />
+    <label htmlFor="username">Email</label>
+  </span>
+
+  <span class="p-float-label input">
+    <input formControlName="password" type="password" pInputText id="password" [(ngModel)]="password" />
+    <label htmlFor="password">Senha</label>
+  </span>
+
+  <div class="check">
+    <p-checkbox value="lembrarSenha" inputId="ny"></p-checkbox>
+    <label for="ny">Lembrar senha</label>
+  </div>
+
+
+
+  <span class="p-float-label input">
+    <button pButton type="submit" pRipple label="Entrar" class="p-button-success entrar"></button>
+  </span>
+</form>

@@ -22,6 +22,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DividerModule } from 'primeng/divider';
+import { HttpClientModule } from '@angular/common/http';
+import { MessagesModule } from 'primeng/messages';
+import { HomeComponent } from './paginas/home/home.component';
+import { ApresentacaoComponent } from './paginas/apresentacao/apresentacao.component';
+import { HomeDashComponent } from './dashboard/home/home.component';
+import { DockModule } from 'primeng/dock';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { SlideMenuModule } from 'primeng/slidemenu';
+import { SplitterModule } from 'primeng/splitter';
+import { MenuModule } from 'primeng/menu';
+import { DashbarComponent } from './componentes/dashbar/dashbar.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +41,13 @@ import { DividerModule } from 'primeng/divider';
     CadastroComponent,
     LoginComponent,
     NavbarComponent,
+    HomeComponent,
+    ApresentacaoComponent,
+    HomeDashComponent,
+    DashbarComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     ButtonModule,
@@ -49,6 +65,12 @@ import { DividerModule } from 'primeng/divider';
     CheckboxModule,
     ReactiveFormsModule,
     DividerModule,
+    MessagesModule,
+    DockModule,
+    RadioButtonModule,
+    SlideMenuModule,
+    SplitterModule,
+    MenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

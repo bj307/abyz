@@ -1,1 +1,26 @@
-<p>cadastro works!</p>
+<form [formGroup]="cadastroForm" (ngSubmit)="submitCadastro()">
+  <p-messages [(value)]="alerta" [enableService]="false" *ngIf="message"></p-messages>
+  <span class="p-float-label input">
+    <input formControlName="nome" pInputText id="nome" [(ngModel)]="nome" />
+    <label htmlFor="username">Nome</label>
+  </span>
+
+  <span class="p-float-label input">
+    <input formControlName="email" pInputText id="email" [(ngModel)]="email" />
+    <label htmlFor="email">Email</label>
+  </span>
+
+  <span class="p-float-label input">
+    <input formControlName="password" type="password" pInputText id="password" [(ngModel)]="password" />
+    <label htmlFor="password">Senha</label>
+  </span>
+
+  <div class="check">
+    <p-checkbox value="lembrarSenha" inputId="ny"></p-checkbox>
+    <label for="ny">Concordo com os termos de uso.</label>
+  </div>
+
+  <span class="p-float-label input">
+    <button pButton type="submit" pRipple label="Entrar" class="p-button-success entrar"></button>
+  </span>
+</form>

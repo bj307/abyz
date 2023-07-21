@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormBuilder,
-  Validators,
-} from '@angular/forms';
-import { Checkbox } from 'primeng/checkbox';
+import { FormBuilder } from '@angular/forms';
+import { NavbarComponent } from 'src/app/componentes/navbar/navbar.component';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-sessao',
@@ -13,18 +9,35 @@ import { Checkbox } from 'primeng/checkbox';
   styleUrls: ['./sessao.component.css'],
 })
 export class SessaoComponent implements OnInit {
-  titulo = 'Login';
+  titulo = '';
+  button = '';
+  cadastro: boolean = false;
+  login: boolean = false;
 
-  constructor(private formBuilder: FormBuilder) {}
-
-  loginForm!: FormGroup;
-  email: string | undefined;
-  password: string | undefined;
+  constructor(
+    private formBuilder: FormBuilder,
+    private loginService: LoginService,
+    private navbar: NavbarComponent
+  ) {}
 
   ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.email, Validators.required]],
-      senha: ['', [Validators.minLength(6), Validators.required]],
-    });
+    this.titulo = 'Login';
+    this.button = 'Cadastre-se';
+    this.cadastro = false;
+    this.login = true;
+  }
+
+  public alterarCadastroOuLogin() {
+    if (this.cadastro) {
+      this.titulo = 'Login';
+      this.button = 'Cadastre-se';
+      this.login = true;
+      this.cadastro = false;
+    } else if (this.login) {
+      this.titulo = 'Cadastro';
+      this.button = 'Faça Login';
+      this.login = false;
+      this.cadastro = true;
+    }
   }
 }

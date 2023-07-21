@@ -9,8 +9,6 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent implements OnInit {
   constructor(private primengConfig: PrimeNGConfig) {}
 
-  title = 'abyz';
-
   ngOnInit() {
     this.primengConfig.ripple = true;
   }

@@ -8,27 +8,17 @@ section {
   margin: 0 auto;
   height: auto;
   padding-top: calc(calc(100vh - 130px) / 4);
+  text-align: center;
 }
 
-p-fieldset {
-  margin-top: 50%;
+.cadastro {
+  color: red;
 }
 
-input,
-.entrar {
-  width: -webkit-fill-available !important;
+.login {
+  color: green;
 }
 
-.input {
-  margin-top: 30px;
-}
-
-.check {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-}
-
-.check label {
-  margin-left: 5px;
+.button:hover {
+  cursor: pointer;
 }

@@ -1,0 +1,35 @@
+<app-dashbar></app-dashbar>
+
+<div class="card2">
+  <div class="dock-window">
+    <p-dock [model]="items" [position]="'bottom'">
+      <ng-template pTemplate="item" let-item>
+        <p-button [icon]="item.icon" [styleClass]="item.styleClass"></p-button>
+      </ng-template>
+    </p-dock>
+  </div>
+</div>
+
+
+<div class="card">
+  <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
+    <ng-template pTemplate>
+
+    </ng-template>
+    <ng-template pTemplate>
+      <div class="card flex justify-content-center">
+        <p-card header="Usuário logado">
+          <p class="m-0">
+            Nome: {{usuario.nome}}
+          </p>
+          <p class="m-0">
+            Email: {{usuario.email}}
+          </p>
+          <p class="m-0">
+            Projetos: [{{usuario.projetos}}]
+          </p>
+        </p-card>
+      </div>
+    </ng-template>
+  </p-splitter>
+</div>

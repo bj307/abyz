@@ -1,0 +1,18 @@
+.card2 {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.p-dock,
+.p-dock-action,
+.p-ripple,
+.p-element img {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.p-dock-list,
+.p-dock {
+  padding: unset !important;
+}
