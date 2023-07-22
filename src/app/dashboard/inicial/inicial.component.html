@@ -1,0 +1,59 @@
+<div class="grid template">
+  <div class="col-12 md:col-12 lg:col-5">
+    <div class="flex conteudo">
+      <p-scrollPanel class="flex" styleClass="custombar0">
+
+      </p-scrollPanel>
+    </div>
+  </div>
+  <div class="col-12 md:col-12 lg:col-7">
+    <div class="flex conteudo projetos">
+      <p-scrollPanel class="flex" styleClass="custombar0">
+
+
+        <div class="grid">
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="card">
+              <div class="header" (click)="abreProjeto()">
+                <strong>Projeto 01</strong>
+                <p-button icon="pi {{button}}" styleClass="p-button-sm p-button-rounded p-button-warning p-button-text"
+                  (onClick)="colapse()"></p-button>
+              </div>
+              <div class="body" *ngIf="isColapse">
+                <p>Criação: </p>
+                <p>Tarefas: </p>
+
+              </div>
+              <div class="footer">
+                <a>STATUS</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+          <div class="col-12 md:col-7 lg:col-4">
+            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
+          </div>
+        </div>
+
+
+      </p-scrollPanel>
+    </div>
+  </div>
+</div>

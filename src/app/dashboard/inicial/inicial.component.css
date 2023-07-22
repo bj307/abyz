@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Space+Grotesk:wght@700&display=swap');
+
+.template {
+  margin: 5px;
+  min-height: calc(100vh - 82px - 65px - 10px);
+  height: auto;
+}
+
+.flex,
+.scroll {
+  border-radius: 8px;
+  height: 100%;
+  padding: 5px;
+}
+
+.projetos {
+  background-color: #252837;
+  border: 1px solid rgb(211, 210, 210);
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  color: #4c4f5c;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.header strong {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #FF9F42;
+  background: radial-gradient(ellipse farthest-corner at center center, #FF9F42 40%, #EA5455 67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  padding: 1px;
+  background-color: green;
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .template {
+    margin: 3px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  .template {
+    margin: 1px;
+    margin-bottom: 60px;
+  }
+
+  .col-12 {
+    max-height: 350px;
+  }
+}

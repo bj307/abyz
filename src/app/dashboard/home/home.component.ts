@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { IUsuario } from 'src/app/interfaces/IUsuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
@@ -9,7 +10,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeDashComponent implements OnInit {
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private usuarioService: UsuarioService, private router: Router) {}
 
   usuario: IUsuario = {
     id: '',
@@ -35,6 +36,8 @@ export class HomeDashComponent implements OnInit {
             (this.usuario.projetos = res.projetos),
             (this.usuario.token = jwtToken);
         });
+    } else {
+      this.router.navigate(['/iniciar']);
     }
 
     this.items = [

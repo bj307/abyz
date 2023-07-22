@@ -33,6 +33,8 @@ import { SlideMenuModule } from 'primeng/slidemenu';
 import { SplitterModule } from 'primeng/splitter';
 import { MenuModule } from 'primeng/menu';
 import { DashbarComponent } from './componentes/dashbar/dashbar.component';
+import { InicialComponent } from './dashboard/inicial/inicial.component';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { DashbarComponent } from './componentes/dashbar/dashbar.component';
     ApresentacaoComponent,
     HomeDashComponent,
     DashbarComponent,
+    InicialComponent,
   ],
   imports: [
     HttpClientModule,
@@ -71,6 +74,7 @@ import { DashbarComponent } from './componentes/dashbar/dashbar.component';
     SlideMenuModule,
     SplitterModule,
     MenuModule,
+    ScrollPanelModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

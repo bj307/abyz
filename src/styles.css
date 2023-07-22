@@ -32,3 +32,8 @@ body {
     padding: unset !important;
   }
 }
+
+.p-dock-list-container {
+  position: fixed !important;
+  bottom: 0 !important;
+}
