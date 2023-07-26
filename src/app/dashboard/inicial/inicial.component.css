@@ -12,6 +12,7 @@
   border-radius: 8px;
   height: 100%;
   padding: 5px;
+  width: -webkit-fill-available;
 }
 
 .projetos {
@@ -46,13 +47,23 @@
   font-size: 18px;
 }
 
+.body {
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.collapsed {
+  max-height: 0;
+}
+
 .footer {
   font-size: 14px;
   text-align: center;
   color: white;
   border-radius: 8px;
   padding: 1px;
-  background-color: green;
+  background-color: #6bc950;
 }
 
 
@@ -68,9 +79,5 @@
   .template {
     margin: 1px;
     margin-bottom: 60px;
-  }
-
-  .col-12 {
-    max-height: 350px;
   }
 }

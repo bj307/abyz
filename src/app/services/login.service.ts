@@ -12,6 +12,6 @@ export class LoginService {
   private API = environment.API;
 
   public login(usuario: ILogin) {
-    return this.http.post<ILogin>(`${this.API}usuario/login`, usuario);
+    return this.http.post(`${this.API}usuario/login`, usuario);
   }
 }

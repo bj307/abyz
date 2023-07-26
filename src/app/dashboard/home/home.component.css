@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Space+Grotesk:wght@700&display=swap');
+
 .card {
   max-width: 1000px;
   margin: 0 auto;
@@ -14,4 +17,9 @@
 .p-dock-list,
 .p-dock {
   padding: unset !important;
+}
+
+.novoProjeto {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
 }

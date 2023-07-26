@@ -1,0 +1,26 @@
+p-fieldset {
+  margin-top: 50%;
+}
+
+input,
+.cadastrar {
+  width: -webkit-fill-available !important;
+}
+
+.input {
+  margin-top: 30px;
+}
+
+.p-password-meter {
+  display: unset !important;
+}
+
+.formProjeto {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.inputDesc {
+  max-width: -webkit-fill-available !important;
+  min-width: -webkit-fill-available !important;
+}

@@ -1,0 +1,23 @@
+<div class="formProjeto">
+  <form [formGroup]="projetoForm" (ngSubmit)="submitProjeto()">
+    <p-messages [(value)]="alerta" [enableService]="false" *ngIf="message"></p-messages>
+    <span class="p-float-label input">
+      <input formControlName="nome" pInputText id="nome" [(ngModel)]="nome" />
+      <label>Nome do projeto</label>
+    </span>
+
+    <span class="p-float-label input">
+      <p-inputMask formControlName="data" class="inputData" [(ngModel)]="data" mask="99/99/9999"></p-inputMask>
+      <label>Data</label>
+    </span>
+
+    <span class="p-float-label input">
+      <textarea pInputTextarea class="inputDesc" [(ngModel)]="descricao"></textarea>
+      <label>Descrição</label>
+    </span>
+
+    <span class="p-float-label input">
+      <button pButton type="submit" pRipple label="Criar projeto" class="p-button-success cadastrar"></button>
+    </span>
+  </form>
+</div>

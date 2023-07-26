@@ -8,48 +8,28 @@
   </div>
   <div class="col-12 md:col-12 lg:col-7">
     <div class="flex conteudo projetos">
-      <p-scrollPanel class="flex" styleClass="custombar0">
+      <p-scrollPanel class="flex">
 
 
         <div class="grid">
-          <div class="col-12 md:col-7 lg:col-4">
+          <div class="col-12 md:col-7 lg:col-4 projeto" *ngFor="let projeto of projetos">
             <div class="card">
               <div class="header" (click)="abreProjeto()">
-                <strong>Projeto 01</strong>
-                <p-button icon="pi {{button}}" styleClass="p-button-sm p-button-rounded p-button-warning p-button-text"
-                  (onClick)="colapse()"></p-button>
+                <strong>{{projeto.nome}}</strong>
+                <p-button icon="pi {{projeto.button}}"
+                  styleClass="p-button-sm p-button-rounded p-button-warning p-button-text"
+                  (onClick)="colapse(projeto)"></p-button>
               </div>
-              <div class="body" *ngIf="isColapse">
-                <p>Criação: </p>
-                <p>Tarefas: </p>
-
+              <div class="body" [ngClass]="{ 'collapsed': projeto.colapse }">
+                <p>Criação: {{projeto.data}}</p>
+                <p>Tarefas: {{projeto.descricao}}</p>
               </div>
               <div class="footer">
-                <a>STATUS</a>
+                <a>{{projeto.status}}</a>
               </div>
             </div>
           </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
-          <div class="col-12 md:col-7 lg:col-4">
-            <div class="text-center p-3 border-round-sm bg-primary font-bold teste">PROJETO</div>
-          </div>
+
         </div>
 
 

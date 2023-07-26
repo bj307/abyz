@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Space+Grotesk:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: #1d2026;
+  color: #fefefe;
+  display: flex;
+  height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  margin: auto;
+  padding: 30px;
+  background: transparent;
+}
+
+#user {
+  margin: 50px auto 10px;
+  background: #2c3039;
+  box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.20);
+  border-radius: 5px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+#user i.fa-gear {
+  position: absolute;
+  border-radius: 5px;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8em;
+  color: #1d2026;
+  transition: color 0.2s ease-in-out;
+}
+
+#user i.fa-gear:hover {
+  color: #0270d8;
+  cursor: pointer;
+}
+
+#avatar {
+  border-radius: 50%;
+  max-width: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #0270d8, #1dcdfa);
+  padding: 0.16em;
+  margin-top: -50px;
+}
+
+#main {
+  padding: 10px 25px 25px;
+}
+
+#main h3 {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.3em;
+  margin-bottom: 1px;
+}
+
+#main p {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #788192;
+  font-size: 1.1em;
+}
+
+#level {
+  margin-bottom: -15px;
+}
+
+#level p {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  background: #0270d8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  display: inline-block;
+}
+
+#information {
+  padding: 25px;
+  background: #393e4a;
+  border-radius: 50% 50% 5px 5px / 5px 5px;
+}
+
+#stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+#stats>div:not(:first-child) {
+  margin-left: 25px;
+}
+
+#stats h4 {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.9em;
+  font-weight: normal;
+}
+
+#stats p {
+  font-family: 'Lobster', cursive;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  color: #1dcdfa;
+  font-weight: 600;
+}
+
+#description {
+  color: #788192;
+  margin: 25px 0;
+}
+
+#actions {
+  display: flex;
+}
+
+#actions button {
+  background: transparent;
+  padding: 5px 10px;
+  flex: 1;
+  color: #fefefe;
+  border-radius: 3px;
+  outline: none;
+  font-size: 1.6em;
+  font: inherit;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#actions button::-moz-focus-inner {
+  border: 0;
+}
+
+#actions button:first-child {
+  margin-right: 7px;
+  background: linear-gradient(to right, #0270d8, #1dcdfa);
+  background-size: 170%;
+  border: none;
+  cursor: pointer;
+}
+
+#actions button:first-child:hover,
+#actions button:first-child:focus {
+  background-size: 100%;
+}
+
+#actions button:last-child {
+  margin-left: 7px;
+  border: 0.1em solid #0270d8;
+}
+
+#actions button:last-child:hover,
+#actions button:last-child:focus {
+  border-color: #1dcdfa;
+}

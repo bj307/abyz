@@ -38,8 +38,9 @@ export class LoginComponent implements OnInit {
       };
       this.loginService.login(usuario).subscribe(
         (res) => {
-          sessionStorage.setItem('usuario_logado', JSON.stringify(res));
-          this.router.navigate(['/dashboard']);
+          console.log(res),
+            sessionStorage.setItem('usuario_logado', JSON.stringify(res));
+          this.router.navigate(['/in']);
         },
         (err) => {
           (this.erro = true),

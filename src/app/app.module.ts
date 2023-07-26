@@ -35,6 +35,11 @@ import { MenuModule } from 'primeng/menu';
 import { DashbarComponent } from './componentes/dashbar/dashbar.component';
 import { InicialComponent } from './dashboard/inicial/inicial.component';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { SidebarModule } from 'primeng/sidebar';
+import { NovoprojetoComponent } from './componentes/novoprojeto/novoprojeto.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputMaskModule } from 'primeng/inputmask';
+import { PerfilComponent } from './dashboard/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,8 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
     HomeDashComponent,
     DashbarComponent,
     InicialComponent,
+    NovoprojetoComponent,
+    PerfilComponent,
   ],
   imports: [
     HttpClientModule,
@@ -75,6 +82,9 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
     SplitterModule,
     MenuModule,
     ScrollPanelModule,
+    SidebarModule,
+    InputTextareaModule,
+    InputMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

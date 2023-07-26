@@ -21,8 +21,10 @@ export class HomeDashComponent implements OnInit {
   };
 
   items: MenuItem[] | undefined;
+  sidebarVisible: boolean = false;
 
   ngOnInit(): void {
+    this.sidebarVisible = false;
     const sessao = sessionStorage.getItem('usuario_logado');
     if (sessao) {
       const { email, jwtToken } = JSON.parse(sessao);
@@ -45,21 +47,29 @@ export class HomeDashComponent implements OnInit {
         label: 'Início',
         icon: 'pi pi-home',
         styleClass: 'p-button-primary',
+        routerLink: 'dashboard',
+        replaceUrl: true,
       },
       {
         label: 'Meus Projetos',
         icon: 'pi pi-microsoft',
         styleClass: 'p-button-success',
+        routerLink: '.',
+        replaceUrl: true,
       },
       {
         label: 'Criar Projeto',
         icon: 'pi pi-plus',
         styleClass: 'p-button-warning',
+        routerLink: '.',
+        replaceUrl: false,
       },
       {
         label: 'Meu Perfil',
         icon: 'pi pi-user',
         styleClass: 'p-button-danger',
+        routerLink: 'perfil',
+        replaceUrl: true,
       },
     ];
   }

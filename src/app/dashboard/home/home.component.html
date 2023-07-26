@@ -2,14 +2,19 @@
 
 
 
-<app-inicial></app-inicial>
+<router-outlet></router-outlet>
+<p-sidebar [(visible)]="sidebarVisible" [fullScreen]="true">
+  <h2 class="novoProjeto">Novo projeto</h2>
+  <app-novoprojeto></app-novoprojeto>
+</p-sidebar>
 
 
 <div class="card">
   <div class="dock-window">
     <p-dock [model]="items" [position]="'bottom'">
       <ng-template pTemplate="item" let-item>
-        <p-button [icon]="item.icon" [styleClass]="item.styleClass"></p-button>
+        <p-button [icon]="item.icon" [styleClass]="item.styleClass" [routerLink]="item.routerLink"
+          (onClick)="sidebarVisible = !item.replaceUrl"></p-button>
       </ng-template>
     </p-dock>
   </div>

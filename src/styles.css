@@ -37,3 +37,7 @@ body {
   position: fixed !important;
   bottom: 0 !important;
 }
+
+.p-scrollpanel {
+  width: -webkit-fill-available;
+}
